@@ -1,0 +1,230 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald-VariableFont_wght.ttf") format("ttf"),
+    url("./fonts/Oswald-Bold.ttf") format("ttf"),
+    url("./fonts/Oswald-ExtraLight.ttf") format("ttf"),
+    url("./fonts/Oswald-Light.ttf") format("ttf"),
+    url("./fonts/Oswald-Medium.ttf") format("ttf"),
+    url("./fonts/Oswald-Regular.ttf") format("ttf"),
+    url("./fonts/Oswald-SemiBold.ttf") format("ttf");
+}
+
+body {
+  line-height: 1;
+  font-family: "Oswald";
+  font-size: 2rem;
+}
+
+#content {
+  height: 100vh;
+}
+
+.backgroudImg {
+  opacity: 0.3;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 60px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 70px 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+.nav > div {
+  cursor: pointer;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  flex-flow: column;
+  font-size: 2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.itemsName {
+  margin-left: 300px;
+  font-weight: 500;
+}
+
+.itemsPrice {
+  margin-right: 300px;
+  font-size: 1.3rem;
+  align-self: flex-end;
+}
+
+#home .home_title {
+  margin: 30px;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#home .home_content {
+  margin: 30px;
+  line-height: 3rem;
+  font-size: 1.3rem;
+}
+
+#contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 50px;
+  margin: 100px;
+}
+
+#contact .contact_title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+
+#contact,
+#menu {
+  display: none;
+}

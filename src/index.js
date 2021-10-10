@@ -100,7 +100,7 @@ const page_load = () => {
 };
 
 //Event Listeners
-const init = () => {
+const eventEmit = () => {
   const $homeBtn = document.querySelector(".home");
   const $menuBtn = document.querySelector(".menu");
   const $contactBtn = document.querySelector(".contact");
@@ -109,21 +109,13 @@ const init = () => {
   const $contactContent = document.querySelector("#contact");
 
   function toggleMenu(e) {
-    if (e.target.classList[0] === $homeContent.id) {
-      $menuContent.style.display = "none";
-      $contactContent.style.display = "none";
-      $homeContent.style.display = "flex";
-    }
-    if (e.target.classList[0] === $menuContent.id) {
-      $homeContent.style.display = "none";
-      $contactContent.style.display = "none";
-      $menuContent.style.display = "flex";
-    }
-    if (e.target.classList[0] === $contactContent.id) {
-      $homeContent.style.display = "none";
-      $menuContent.style.display = "none";
-      $contactContent.style.display = "flex";
-    }
+    const contents = [$homeContent, $menuContent, $contactContent];
+
+    contents.forEach((content) => {
+      e.target.classList[0] === content.id
+        ? (content.style.display = "flex")
+        : (content.style.display = "none");
+    });
   }
 
   $homeBtn.addEventListener("click", toggleMenu);
@@ -132,4 +124,4 @@ const init = () => {
 };
 
 page_load();
-init();
+eventEmit();
